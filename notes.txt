@@ -1,0 +1,11 @@
+Virtual Environment 
+    python -m venv venv
+    Command Palette (view or ctrl+shift+p) '+ Enter Interpreter path' => './venv/bin/python'
+    terminal => 'source venv/bin/activate'
+
+FASTAPI 
+    pip install fastapi[all] (in virtual environment)
+
+Start Server 
+    uvicorn main:app
+    uvicorn app.main:app --reload (updates server automatically)
