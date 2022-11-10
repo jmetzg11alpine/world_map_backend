@@ -1,14 +1,27 @@
 from fastapi import FastAPI
 from bs4 import BeautifulSoup 
+from fastapi.middleware.cors import CORSMiddleware
 import pyuser_agent
 import requests
 
 app = FastAPI()
 
+origins = ["*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 def get_number(td):
     x = str(td)
     x = x.split('\n')[1].strip(' ')
-    return x.split('\r')[0]
+    x = x.split('\r')[0]
+    x = x.strip(' ')
+    x = x.strip('%')
+    return x
 
 def get_data():
     user = pyuser_agent.UA()
