@@ -38,13 +38,13 @@ def get_data():
 
     payload = {}
 
-    europes = [('UK', 5), ('Germany', 15), ('France', 25), ('Italy', 35), ('Spain', 45), ('Russia', 55),
+    europes = [('United Kingdom', 5), ('Germany', 15), ('France', 25), ('Italy', 35), ('Spain', 45), ('Russia', 55),
             ('Turkey', 75), ('Sweden', 95), ('Poland', 105), ('Norway', 125), ('Austria', 135), ('Denmark', 145),
             ('Finland', 155)]
     for europe in europes:
         payload[europe[0]] = get_number(Europe[europe[1]])
         
-    americas = [('USA', 15), ('Ecuador', 35), ('Canada', 45), ('Brazil', 55), ('Mexico', 65), ('Peru', 75),
+    americas = [('United States of America', 15), ('Ecuador', 35), ('Canada', 45), ('Brazil', 55), ('Mexico', 65), ('Peru', 75),
             ('Argentina', 85), ('Venezuela', 95), ('Colombia', 105), ('Chile', 115)]
     for america in americas:
         payload[america[0]] = get_number(Americas[america[1]])
@@ -60,7 +60,7 @@ def get_data():
         payload[australia[0]] = get_number(Australia[australia[1]])
         
     africas = [('Nigeria', 5), ('South Africa', 15), ('Egypt', 35), ('Morocco', 45), ('Kenya', 65), ('Tanzania', 75),
-            ('Tunisia', 85), ('Ghana', 95), ('Mauritius', 105), ('Uganda', 115), ('Namibia', 125), ('Botswana', 135),
+            ('Tunisia', 85), ('Ghana', 95), ('Uganda', 115), ('Namibia', 125), ('Botswana', 135),
             ('Zimbabwe', 145)]
     for africa in africas:
         payload[africa[0]] = get_number(Africa[africa[1]])
